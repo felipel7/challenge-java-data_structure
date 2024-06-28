@@ -1,29 +1,21 @@
 package com.data_structure;
 
-import com.data_structure.stack.Expression;
-import com.data_structure.stack.Stack;
-import com.data_structure.stack.StringReverser;
+import com.data_structure.queue.ArrayQueue;
 
 public class Main {
 
   public static void main(String[] args) {
 
-    String stringToBeReverse = "abc";
-    var stringReverser = new StringReverser();
-    var reversed = stringReverser.reverse(stringToBeReverse);
-    System.out.println(reversed);
-
-    String string = "(({[<>]}))";
-    Expression expression = new Expression();
-    var result = expression.isBalanced(string);
-    System.out.println(result);
-
-    Stack stack = new Stack();
-    stack.push(10);
-    stack.push(20);
-    stack.push(30);
-    stack.pop();
-    System.out.println(stack);
-    System.out.println(stack.peek());
+    ArrayQueue arrayQueue = new ArrayQueue(5);
+    arrayQueue.enqueue(10);
+    arrayQueue.enqueue(20);
+    arrayQueue.enqueue(30);
+    arrayQueue.dequeue();
+    arrayQueue.dequeue();
+    arrayQueue.enqueue(40);
+    arrayQueue.enqueue(50);
+    arrayQueue.enqueue(60);
+    System.out.println(arrayQueue);
+    System.out.println(arrayQueue.peek());
   }
 }
