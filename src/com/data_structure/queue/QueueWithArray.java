@@ -2,14 +2,14 @@ package com.data_structure.queue;
 
 import java.util.Arrays;
 
-public class ArrayQueue {
+public class QueueWithArray {
 
   private int count = 0;
   private int front = 0;
   private int rear = 0;
   private int[] items;
 
-  public ArrayQueue(int capacity) {
+  public QueueWithArray(int capacity) {
     this.items = new int[capacity];
   }
 
