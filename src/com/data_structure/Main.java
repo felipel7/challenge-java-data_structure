@@ -1,18 +1,20 @@
 package com.data_structure;
 
-import com.data_structure.queue.QueueWithStacks;
+import com.data_structure.queue.PriorityQueueWithArray;
 
 public class Main {
 
   public static void main(String[] args) {
 
-    QueueWithStacks queue = new QueueWithStacks();
-    queue.enqueue(10);
-    queue.enqueue(20);
-    queue.enqueue(30);
-    System.out.println(queue.dequeue());
-    System.out.println(queue.dequeue());
-    System.out.println(queue.peek());
-    System.out.println(queue.peek());
+    PriorityQueueWithArray queue = new PriorityQueueWithArray();
+    queue.insert(5);
+    queue.insert(1);
+    queue.insert(4);
+    queue.insert(3);
+    queue.insert(2);
+    System.out.println(queue);
+    System.out.println(queue.remove());
+    System.out.println(queue.remove());
+    System.out.println(queue);
   }
 }
