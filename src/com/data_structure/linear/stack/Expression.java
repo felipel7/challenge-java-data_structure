@@ -1,4 +1,4 @@
-package com.data_structure.stack;
+package com.data_structure.linear.stack;
 
 import java.util.Arrays;
 import java.util.List;

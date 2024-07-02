@@ -1,4 +1,4 @@
-package com.data_structure.hashtables;
+package com.data_structure.linear.hash_tables;
 
 import java.util.LinkedList;
 
