@@ -27,5 +27,20 @@ public class Main {
     binarySearchTree.traversePostOrder();
 
     System.out.println("\nTree height: " + binarySearchTree.height());
+
+    System.out.println("\nMin value in the tree: " + binarySearchTree.findMinInBST());
+
+    Tree other = new Tree();
+    other.insert(7);
+    other.insert(4);
+    other.insert(1);
+    other.insert(6);
+    other.insert(9);
+    other.insert(8);
+    other.insert(10);
+
+    System.out.println("\nAre the trees equal? " + binarySearchTree.equals(other));
+
+    System.out.println("\nIs the BST valid? " + binarySearchTree.isValidBST());
   }
 }
