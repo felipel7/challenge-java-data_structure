@@ -42,5 +42,10 @@ public class Main {
     System.out.println("\nAre the trees equal? " + binarySearchTree.equals(other));
 
     System.out.println("\nIs the BST valid? " + binarySearchTree.isValidBST());
+
+    System.out.print("\nNodes at distance 2: " + binarySearchTree.getNodesAtDistance(2));
+
+    System.out.println("\nTraverse Level Order:");
+    binarySearchTree.traverseLevelOrder();
   }
 }

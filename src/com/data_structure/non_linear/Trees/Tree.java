@@ -1,5 +1,8 @@
 package com.data_structure.non_linear.Trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Tree {
 
   private Node root;
@@ -175,6 +178,35 @@ public class Tree {
         && isValidBST(root.rightChild, root.value + 1, max);
   }
 
+  // Exercise 3 - Distance at K distance
+  public List<Integer> getNodesAtDistance(int distance) {
+    var list = new ArrayList<Integer>();
+    getNodesAtDistance(root, distance, list);
+    return list;
+  }
+
+  private void getNodesAtDistance(Node root, int distance, ArrayList<Integer> list) {
+    if (root == null) {
+      return;
+    }
+
+    if (distance == 0) {
+      list.add(root.value);
+      return;
+    }
+
+    getNodesAtDistance(root.leftChild, distance - 1, list);
+    getNodesAtDistance(root.rightChild, distance - 1, list);
+  }
+
+  // Exercise 4
+  public void traverseLevelOrder() {
+    for (int i = 0; i <= height(); i++) {
+      for (var value : getNodesAtDistance(i)) {
+        System.out.println(value);
+      }
+    }
+  }
 
   private boolean isEmpty() {
     return root == null;
