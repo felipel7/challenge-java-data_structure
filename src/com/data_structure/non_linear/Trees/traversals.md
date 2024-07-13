@@ -12,11 +12,11 @@
 
 ### Depth and Height
 
-**Depth** = Number of edges from the root to the target node.
+**Depth** = Number of edges from the root to the target AVLNode.
 
-**Height** =  Number of edges on the longest path from the node to a leaf node.
-_The height of the root node is the height of the tree._
+**Height** =  Number of edges on the longest path from the AVLNode to a leaf AVLNode.
+_The height of the root AVLNode is the height of the tree._
 
 <br />
 
-Formula to calculate height of a node: `1 + max(height(L), height(R))`
+Formula to calculate height of a AVLNode: `1 + max(height(L), height(R))`
