@@ -1,4 +1,4 @@
-package com.data_structure.non_linear.Trees;
+package com.data_structure.non_linear.Trees.AVL;
 
 public class AVLTree {
 
