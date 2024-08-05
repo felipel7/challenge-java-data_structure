@@ -42,7 +42,7 @@ public class Heap {
     }
 
     var isValid = items[index] >= leftChild(index);
-    if (!hasRightChild(index)) {
+    if (hasRightChild(index)) {
       isValid &= items[index] >= rightChildIndex(index);
     }
 
