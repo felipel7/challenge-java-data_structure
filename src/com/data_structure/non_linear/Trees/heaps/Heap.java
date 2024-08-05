@@ -36,6 +36,14 @@ public class Heap {
     return size == 0;
   }
 
+  public int max() {
+    if (isEmpty()) {
+      throw new IllegalStateException();
+    }
+
+    return items[0];
+  }
+
   private boolean isValidParent(int index) {
     if (!hasLeftChild(index)) {
       return true;
