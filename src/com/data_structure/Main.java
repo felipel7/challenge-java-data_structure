@@ -1,24 +1,28 @@
 package com.data_structure;
 
-import com.data_structure.non_linear.Trees.Tries.Trie;
+import com.data_structure.non_linear.Graphs.Graph;
 
 public class Main {
 
   public static void main(String[] args) {
-    var trie = new Trie();
-    trie.insert("cat");
-    trie.insert("can");
-    trie.insert("car");
+    var graph = new Graph();
+    graph.addNode("A");
+    graph.addNode("B");
+    graph.addNode("C");
+    graph.addNode("D");
+    graph.addEdge("A", "B");
+    graph.addEdge("A", "C");
+    graph.addEdge("A", "D");
 
-    System.out.println(trie.contains("cat"));
-    System.out.println(trie.contains("cats"));
+    graph.print();
 
-    trie.traverse();
+    graph.removeEdge("A", "C");
+    graph.removeNode("D");
 
-    trie.remove("cat");
-    System.out.println(trie.contains("cat"));
+    graph.print();
 
-    var words = trie.findWords("ca");
-    System.out.println(words);
+    graph.addNode("E");
+    graph.addEdge("A", "E");
+    graph.traverseDepthFirst("A");
   }
 }
