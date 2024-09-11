@@ -23,6 +23,18 @@ public class Main {
 
     graph.addNode("E");
     graph.addEdge("A", "E");
-    graph.traverseDepthFirst("A");
+    graph.traverseDepthFirstRec("A");
+
+    graph.print();
+
+    System.out.println("traverseBreadthFirst");
+    graph.traverseBreadthFirst("A");
+
+    var list = graph.topologicalSort();
+    System.out.println(list);
+
+    System.out.println(graph.hasCycle());
+    graph.addEdge("E", "A");
+    System.out.println(graph.hasCycle());
   }
 }
